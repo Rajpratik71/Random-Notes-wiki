@@ -4,3 +4,4 @@ The line below is the test string, but with a space inserted between the $ and E
 
 `X5O!P%@AP[4\PZX54(P^)7CC)7}$ EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*`
 
+Reference: [Eicar Test String - Symantec.com](https://www.symantec.com/security-center/writeup/2003-121611-3209-99)
