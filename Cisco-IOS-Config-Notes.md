@@ -4,7 +4,7 @@ Shows status of all interfaces:
 Shows status messages:
 `terminal monitor`
 
-runs command from anywhere: 
+Run command from anywhere: 
 `: do <command>`
 
 Stop annoying status messages:
