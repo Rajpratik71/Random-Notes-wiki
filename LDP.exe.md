@@ -1,0 +1,1 @@
+LDP.exe is used for testing LDAP connectivity to a Windows Domain Controller. 
