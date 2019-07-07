@@ -1,6 +1,10 @@
 | System | Username/Password |
 |-----|-----|
 | APC Smart-UPS (Schneider Electric) | apc/apc |
+| Common | Guest/Guest |
+| DEC VAX/VMS | FIELD/SERVICE |
+| DEC VAX/VMS | SYSTEM/MANAGER |
+| DEC VAX/VMS | USER/USER |
 | Dell iDRAC6 | root/calvin |
 | HP Color LaserJet 4650 | No password required |
 | HP Color LaserJet 4700 | No password required |
@@ -41,6 +45,7 @@
 | Sharp MX-M5070 | admin |
 | Sharp MX-M6070 | admin |
 | Sharp MX-M753N | admin |
+| UUCP | uucp/uucp |
 | Visara 1460 | No password required |
 | Windows Server 2003 Routing and Remote Access (RRAS) OSPF plain-text password | 12345678 |
 | Xerox Fiery Print Server | admin/Fiery.1 |
