@@ -54,7 +54,7 @@
   end;
 end;
 
-//The following items should be contained in ComboBox1.Items
+The following items should be contained in ComboBox1.Items
 640x480
 800x600
 1024x768
