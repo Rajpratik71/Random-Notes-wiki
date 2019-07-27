@@ -33,4 +33,7 @@ Example:
  Size        : 11,995,224,677 bytes
 
 Make note if the index number and run the following command (with appropriate index#) to install the GUI feature:
- Step 2: Install-Windows Feature Server-Gui-Mgmt-Infra,Server-Gui-Shell -Restart -Source wim:d:\sources\install.wim:<index#>
+
+Step 2:
+
+ Install-Windows Feature Server-Gui-Mgmt-Infra,Server-Gui-Shell -Restart -Source wim:d:\sources\install.wim:<index#>
