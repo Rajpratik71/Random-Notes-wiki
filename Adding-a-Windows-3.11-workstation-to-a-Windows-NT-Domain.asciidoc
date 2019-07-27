@@ -1,0 +1,11 @@
+Go to Control Panel + Network
+
+Deselect Ghosted Connection
+
+Enter the DomainName into the Workgroup Field
+
+Click on the StarUp button
+
+Select Log on to Windows NT or LAN Manager Domain
+
+Enter DomainName
