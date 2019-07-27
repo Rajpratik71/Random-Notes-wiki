@@ -2,51 +2,51 @@
  
  library MyDLL;
  
- uses<br>
-   ShareMem, SysUtils, Classes, Windows; <br>
-   // You will need to use "ShareMem" in the uses clause of both the DLL and Application<br>
+ uses
+   ShareMem, SysUtils, Classes, Windows; 
+   // You will need to use "ShareMem" in the uses clause of both the DLL and Application
  
  {$R *.res}
  
- function GetCurrentComputerName : String;<br>
- var<br>
-   NameBuf: array[0..80] of Char;<br>
-   SizeBuf: LongWord;<br>
- begin<br>
-   SizeBuf := Sizeof(NameBuf);<br>
-   GetComputerName(NameBuf, SizeBuf);<br>
-   result := NameBuf;<br>
- end;<br>
+ function GetCurrentComputerName : String;
+ var
+   NameBuf: array[0..80] of Char;
+   SizeBuf: LongWord;
+ begin
+   SizeBuf := Sizeof(NameBuf);
+   GetComputerName(NameBuf, SizeBuf);
+   result := NameBuf;
+ end;
  
- exports<br>
-   GetCurrentComputerName;<br>
+ exports
+   GetCurrentComputerName;
  
- begin<br>
- end.<br>
+ begin
+ end.
  
- //---------------------------------------------------------------------<br>
- Sample Application Code:<br>
+ //---------------------------------------------------------------------
+ Sample Application Code:
  
- unit Main;<br>
+ unit Main;
  
- interface<br>
+ interface
  
- uses<br>
+ uses
    Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,Dialogs, StdCtrls;
  
- type<br>
-   TForm1 = class(TForm)<br>
-     Edit1: TEdit;<br>
-     Button1: TButton;<br>
-     procedure Button1Click(Sender: TObject);<br>
-   private<br>
-     { Private declarations }<br>
-   public<br>
-     { Public declarations }<br>
+ type
+   TForm1 = class(TForm)
+     Edit1: TEdit;
+     Button1: TButton;
+     procedure Button1Click(Sender: TObject);
+   private
+     { Private declarations }
+   public
+     { Public declarations }
    end;
  
- var<br>
-   Form1: TForm1;<br>
+ var
+   Form1: TForm1;
  
  implementation
  
@@ -54,9 +54,9 @@
  
  function GetCurrentComputerName: String; external '.\MyDll.dll';
  
- procedure TForm1.Button1Click(Sender: TObject);<br>
- begin<br>
-   Edit1.Text := GetCurrentComputerName;<br>
- end;<br>
+ procedure TForm1.Button1Click(Sender: TObject);
+ begin
+   Edit1.Text := GetCurrentComputerName;
+ end;
  
  end.
