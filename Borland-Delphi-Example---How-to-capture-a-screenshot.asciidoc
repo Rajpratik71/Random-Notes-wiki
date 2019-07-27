@@ -59,8 +59,7 @@
      Form2.Label1.Color := RGBtoColor(GetRValue(Col), GetGValue(Col), GetBValue(Col));
  Timer1.Enabled := True;
  end;
- 
- //Form2
+  //Form2
  procedure TForm2.Image1Click(Sender: TObject);
  begin
  Form1.Timer1.Enabled := False;
