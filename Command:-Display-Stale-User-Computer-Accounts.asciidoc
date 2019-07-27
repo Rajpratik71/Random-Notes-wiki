@@ -1,0 +1,5 @@
+== Display Stale User Accounts ==
+ dsquery user <domainroot> -stalepwd 180 -limit 0
+
+== Display Stale Computer Accounts ==
+ dsquery computer <domainroot> -stalepwd 180 -limit 0
