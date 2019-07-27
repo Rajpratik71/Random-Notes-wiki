@@ -1,0 +1,18 @@
+ procedure TForm1.FormCreate(Sender: TObject);
+ begin
+  Form1.WindowState := WSMaximized;
+  StartTime := Now;
+  Timer1.Enabled := True;
+ end;
+ 
+ procedure TForm1.Timer1Timer(Sender: TObject);
+ var
+  Hour, Min, Sec, MSec : Word;
+  Diff : TTime;
+ begin
+  Timer1.Enabled := False;
+  Diff := Now - StartTime;
+  DecodeTime(Diff, Hour, Min, Sec, MSec);
+  Panel1.Caption := 'Elapsed Time = '+IntToStr(Min)+' Minutes '+IntToStr(Sec)+' Seconds.';
+  Timer1.Enabled := True;
+ end;
