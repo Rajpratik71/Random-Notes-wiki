@@ -4,4 +4,5 @@ This will give you the first command-line variable:
  ParamStr(2) will give you the second, and so on...
 
 Example:
+
  If ParamStr(1) = '/?' then showmessage('This is Help'); 
