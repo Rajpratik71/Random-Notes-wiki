@@ -1,0 +1,13 @@
+ procedure TForm1.Timer1Timer(Sender: TObject);
+ var
+  Pos : TPoint;
+ begin
+   GetCursorPos(Pos);
+   If pos.X and pos.Y = 0 then showmessage('00');
+   StaticText1.Caption := ('X: ' + IntToStr(Pos.x) + ' ' + 'Y: ' + IntToStr(Pos.y));
+ end;
+ 
+ procedure TForm1.Restart1Click(Sender: TObject);
+ begin
+  SetCursorPos(Random(0), Random(0));
+ end;
