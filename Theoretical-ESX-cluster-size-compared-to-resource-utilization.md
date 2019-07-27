@@ -1,3 +1,4 @@
+ <pre>
  # of Nodes	Average Maximum Utilization (%)
  2	         35%
  3	         46%
@@ -8,3 +9,4 @@
  8	         62%
  9	         63%
  10	         64%
+</pre>
