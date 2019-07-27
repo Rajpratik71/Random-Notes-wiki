@@ -1,0 +1,7 @@
+This net command will start the DNS services only if the stop command was successful:<br>
+
+ NET STOP DNS && NET START DNS
+
+This net command will start the DNS services even if the stop command failed:<br>
+
+ NET STOP DNS & NET START DNS
