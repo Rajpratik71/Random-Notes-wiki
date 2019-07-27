@@ -1,3 +1,4 @@
+<pre>
 *** STOP: 0x0000000A (0xFF71DB2C,0X00000002,0x00000001,0x8010CFEF)
 IRQL_NOT_LESS_OR_EQUAL*** Address 8010cfe5 has base at 80100000 - ntoskrnl.exe
 
@@ -45,3 +46,4 @@ fe4767f8 801cd410 801cd410 00000000 fe47687c 801dc9c9 ffb6fa48 - Ntfs.sys
 Beginning dump of physical memory
 Physical memory dump complete. Contact your system administrator or
 technical support group.
+</pre>
