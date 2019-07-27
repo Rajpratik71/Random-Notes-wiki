@@ -1,0 +1,6 @@
+ function NetworkPresent: Boolean;
+ begin<br>
+    Result := GetSystemMetrics(SM_NETWORK) and $01 = $01;
+ end;
+
+{ GetSystemMetrics contains network information }
