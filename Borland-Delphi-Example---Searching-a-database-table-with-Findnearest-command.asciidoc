@@ -2,8 +2,7 @@ Add TTable (Table1) Then click on the "IndexDefs" in the Object Inspector. Add a
 
 Then add the following code to a TEdit OnKeyUp event:
 
-procedure TForm2.Edit1KeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-begin
-
+ procedure TForm2.Edit1KeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+ begin
  table1.indexname := 'virusidx';
  table1.findnearest([edit1.text]);
