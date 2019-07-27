@@ -1,0 +1,1 @@
+Bit bucket for T11 groups. Largely unused and mostly theoretical. Can be used for hunt groups, multiple ports mapped to single node. 
