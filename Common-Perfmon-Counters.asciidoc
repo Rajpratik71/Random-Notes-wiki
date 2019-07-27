@@ -1,0 +1,13 @@
+For Windows 2003 and below:
+
+* Processor: % Processor Time
+* Memory: % Committed Bytes In Use
+* Physical Disk: Disk Read Bytes/sec
+* Physical Disk: Disk Reads/sec
+* Physical Disk: Disk Write Bytes/sec
+* Physical Disk: Disk Writes/sec
+* Physical Disk: Current Disk Queue Length
+* Network: Bytes Received/sec
+* Network: Bytes Sent/sec
+* Network: Packets Received/sec
+* Network: Packets Sent/sec 
