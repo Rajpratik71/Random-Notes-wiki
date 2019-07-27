@@ -1,0 +1,1 @@
+SID2USR.EXE is used to identify a user account from a SID. 
