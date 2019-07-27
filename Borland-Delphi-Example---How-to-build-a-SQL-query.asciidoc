@@ -1,0 +1,15 @@
+ procedure TForm1.SpeedButton1Click(Sender: TObject);
+ var
+   S1,S2,S3,S4,SF   :  String;
+   QueryCount : Integer;
+ begin
+   S1   :=   'Select * from "CALLS"';
+   S2   :=   ' where "CALLNUMBER" = ' + '''' + Edit1.Text + '''';
+   S3   :=   ' or "LASTNAME" = ' + '''' + Edit2.Text + '''';
+   S4   :=   ' and "ANALGROUP" = ' + '''' + DBComboBox1.Text + '''';
+   SF   :=   S1 + S2 + S3 + S4;
+   MessageDlg(SF, mtInformation,[mbOK],0);
+   Query1.SQL.Clear;
+   Query1.Sql.Add(SF);
+   Query1.Open;
+ end;
