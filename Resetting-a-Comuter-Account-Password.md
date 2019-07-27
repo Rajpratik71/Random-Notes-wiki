@@ -1,5 +1,5 @@
 <pre>
-net user <ComputerName>$ <password>
+net user [ComputerName]$ [password]
 </pre>
 
 Example:
