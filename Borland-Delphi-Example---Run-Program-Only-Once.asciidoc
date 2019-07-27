@@ -1,0 +1,23 @@
+ !**************************************
+ ! Name: Article: RunOnlyOnce: A short di
+ !     scussion; FIndWindow versus GlobalAtoms 
+ !     versus Mutex.
+ ! Description:Article: RunOnlyOnce: A sh
+ !     ort discussion; FIndWindow versus Global
+ !     Atoms versus Mutex.
+ ! By: David Ward
+ !
+ ! This code is copyrighted and has    
+ ! limited warranties.Please see http://www.Planet-Source-Code.com/xq/ASP/txtCode
+ !     Id.535/lngWId.7/qx/vb/scripts/ShowCode.htm    
+ ! for details.    
+ !**************************************
+    
+When I was first learning to create Windows programs, I used;
+
+ If FindWindow(pchar('TForm'),pchar('Title_of_my_Form'))<>0 Halt; 
+
+Crude, but it works as long as, [1] You do not mind any initialisation code you may have in the "OnCreate" event being executed twice (once for the instance that may be already running and again for subsequent execution attempts), [2] Your application does actually have "Form", i.e. Is not a console or background app and [3] You can live with the irritating flash of the main form showing and then immediately closing.
+So, I progressed to the "GlobalAtom" method (I have recently seen the code example of this posted by "Mr Jerome Scott II", it is absolutely perfect and should work just fine) this method does not suffer from the shortfalls as described for FindWindow, but, you have to destroy the Atom on program termination and should your program crash (as they sometimes do during initial testing and debugging) the Atom remains in-situ, very irritating when you expect to make minor mods and rerun it almost immediately. There are ways round that for     debugging purposes of course, but they defeat the object of the exercise for a program when it goes on general release. Most users of your software will not want to reboot their machine to rerun a program that has already crashed and then refuses to run again because it thinks it is still running. All that said, it is a fine starting point as a solution for this problem.
+Finally, I have settled on the Mutex method. You, the programmer, do not have to destroy any MutexObjects that you have created, Windows will do this for you when your program terminates (or crashes!). Now then, whilst MutexObjects were not specifically designed for this particular purpose (you can always read up on the other, advanced, uses they can be put to), I have found them to be the cleanest effective method of dealing with RunOnlyOnce issues.
+You will find my code solution for this very close in "the list" to this article
