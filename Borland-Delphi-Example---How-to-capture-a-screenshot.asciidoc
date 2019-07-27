@@ -1,0 +1,68 @@
+ function GetScreenShot:TBitmap;
+ var
+   Desktop:HDC;
+ begin
+   Result:= TBitmap.Create;
+   Desktop:= GetDC(0);
+   try
+   try
+     Result.PixelFormat:=pf32bit;
+     Result.Width:=Screen.Width;
+     Result.Height:=Screen.Height;
+     BitBlt(Result.Canvas.Handle,0,0,Result.Width,Result.Height,Desktop,0,0,SRCCOPY);
+     Result.Modified:=True;
+   finally
+     ReleaseDC(0,Desktop);
+   end;
+   except
+     Result.Free;
+     Result:=nil;
+   end;
+ end; 
+ 
+ procedure TForm1.SpeedButton1Click(Sender: TObject);
+ begin
+   If Timer1.Enabled = False then Timer1.Enabled := True;
+   Form1.WindowState := WSMinimized;
+   Form2.Image1.Picture.Bitmap := GetScreenShot;
+   Form2.Show;
+   Form1.WindowState := WSNormal;
+ end;
+ 
+ procedure TForm1.Timer1Timer(Sender: TObject);
+ var
+   P : TPoint;
+   Col : TColor;
+   HLS : THLS;
+   RGB : TRGB;
+ begin
+ Timer1.Enabled := False;
+   GetCursorPos(P); // Where the mouse is currently.
+   // Get the Pixel Color using the Device Context we created earlier
+   Col := GetPixel(DC,P.X,P.Y);
+   if (Col = CLR_INVALID) then
+     panel1.caption := 'Unknown Error'
+   else
+     // HTML
+     R.Text := IntToStr(GetRValue(Col));
+     G.Text := IntToStr(GetGValue(Col));
+     B.Text := IntToStr(GetBValue(Col));
+     RGB := ColorToRGB(Col);
+     HLS := RGBtoHLS(RGB);
+     H.Text := IntToStr(HLS.H); L.Text := IntToStr(HLS.L); S.Text := IntToStr(HLS.S);
+     HTML.Text := Format( '#%.2x%.2x%.2x', [ GetRValue( Col), GetGValue( Col), GetBValue( Col)]);
+     FHTML.Text := 'Hex={'+IntToHex(GetRValue(Col),2)+','+IntToHex(GetGValue(Col),2)+','+IntToHex(GetBValue(Col),2)+'}';
+     Delphi.Text := Format( '$00%.2x%.2x%.2x', [ GetBValue( Col), GetGValue( Col), GetRValue( Col)]);
+     VB.Text := Format( '&H00%.2x%.2x%.2x&', [ GetRValue( Col), GetGValue( Col), GetBValue( Col)]);
+     Cplus.Text := Format( '0x%.2x%.2x%.2x', [ GetRValue( Col), GetGValue( Col), GetBValue( Col)]);
+     Label1.Color := RGBtoColor(GetRValue(Col), GetGValue(Col), GetBValue(Col));
+     Form2.Label1.Color := RGBtoColor(GetRValue(Col), GetGValue(Col), GetBValue(Col));
+ Timer1.Enabled := True;
+ end;
+ 
+ //Form2
+ procedure TForm2.Image1Click(Sender: TObject);
+ begin
+ Form1.Timer1.Enabled := False;
+ Close;
+ end;
