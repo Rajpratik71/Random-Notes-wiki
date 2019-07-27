@@ -36,10 +36,10 @@
   Result := ChangeDisplaySettings(DeviceMode, CDS_UPDATEREGISTRY);
  end;
 
-procedure TForm1.ComboBox1Change(Sender: TObject);
-var
- OldWidth, OldHeight: integer;
- x,y: Integer;
+ procedure TForm1.ComboBox1Change(Sender: TObject);
+ var
+  OldWidth, OldHeight: integer;
+  x,y: Integer;
  begin
   OldWidth := GetSystemMetrics(SM_CXSCREEN);
   OldHeight := GetSystemMetrics(SM_CYSCREEN);
