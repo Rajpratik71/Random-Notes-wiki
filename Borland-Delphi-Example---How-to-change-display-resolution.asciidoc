@@ -1,15 +1,11 @@
  uses
  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Menus;
- 
- var
+  var
  Form1: TForm1;
  hTaskBarWindow : Hwnd;
- 
  implementation
- 
- {$R *.DFM}
- 
- procedure TForm1.FormCreate(Sender: TObject);
+  {$R *.DFM}
+  procedure TForm1.FormCreate(Sender: TObject);
  var
  x,y: Integer;
  hApplic: HWND;
@@ -44,7 +40,6 @@ procedure TForm1.ComboBox1Change(Sender: TObject);
 var
  OldWidth, OldHeight: integer;
  x,y: Integer;
- 
  begin
   OldWidth := GetSystemMetrics(SM_CXSCREEN);
   OldHeight := GetSystemMetrics(SM_CYSCREEN);
