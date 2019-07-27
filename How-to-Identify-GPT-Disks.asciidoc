@@ -2,13 +2,13 @@ GPT (GUID Partition Table) disks are not supported with the VMWare Converter, so
 
 To check for GPT disks, run the following commands:
 
- c:\>'''diskpart'''
+ c:\>diskpart
  
  Microsoft DiskPart version 5.2.3790.3959
  Copyright (C) 1999-2001 Microsoft Corporation.
  On computer: Server01
  
- DISKPART> '''list disk'''
+ DISKPART> list disk
   
   Disk ###  Status      Size     Free     Dyn  Gpt
   --------  ----------  -------  -------  ---  ---
