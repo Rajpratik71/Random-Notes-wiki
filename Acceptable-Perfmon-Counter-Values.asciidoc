@@ -1,0 +1,20 @@
+== Logical Disk: Ave Disk Queue Length ==
+Add 2 to the number of Spindles present for an acceptable average. 1 Spindle + 2 = 3. A value above this calculation indicates a bottleneck with the hard disk.
+
+
+== Processor: % Processor Time ==
+Values up to 85% are considered acceptable.
+
+
+== Memory: Pages/sec ==
+An average value of around 6 is considered acceptable. The acceptable threshold can vary substantially depending on computer hardware, but a value of greater than 20 can indicate the need for more RAM.
+
+
+== Network Interface: Bytes Total/sec ==
+Determine % of totally bandwidth available.
+
+10Mbps supports up to 1,310,720 Bytes per second.
+
+100Mbps supports up to 13,107,200 Bytes per second.
+
+1000Mbps supports up to 131,072,000 Bytes per second.
