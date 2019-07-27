@@ -1,0 +1,47 @@
+ $realpi = "3.14159265358979323846264338327950288"
+ 
+ [double] $denominator=1.0
+ [double] $pi=1.0
+ 
+ Clear-Host
+ Write-Host "Approximating Pi with the Leibniz Formula in PowerShell"; Write-Host
+ 
+ $num = Read-Host "How many terms do you want to perform?"
+ $starttime = Get-Date
+ 
+ for($i = 1; $i -le $num; $i++)
+ 	{
+ 		$denominator += 2.0
+ 		if($i%2 -eq 1) {
+ 			$pi -=  [double] (1/$denominator)
+ 			}
+ 		else {
+     		$pi += [double] (1/$denominator)
+     		}
+ 	# Write-Host "`r" $i -nonewline
+ 	}
+ $pi = $pi * 4.0
+ $finishtime = Get-Date
+ 
+ $pistr = [string]$pi	# Convert $pi to String
+ 
+ Write-Host
+ for ($l=0; $l -le $pistr.Length - 1; $l++) {
+ 	$pchar = $pistr.Substring($l,1)	#Read character from PiString
+ 	$rchar = $realpi.Substring($l,1)	#Read character from RealPi
+ 	#write-Host $pchar " " $rchar
+ 	if ($pchar -match $rchar) {
+ 		Write-Host $pchar -ForeGroundColor Green -nonewline
+ 	} Else {
+ 		Write-Host $pchar -ForeGroundColor Red -nonewline
+ 	}
+ 	
+ }
+ 
+ Write-Host; Write-Host
+ Write-Host "Started: "$starttime
+ Write-Host "Finished: "$finishtime
+ New-TimeSpan $starttime $finishtime
+ 
+ Write-Host "`nPress any key to continue"
+ $null = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
