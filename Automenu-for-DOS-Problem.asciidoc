@@ -1,0 +1,5 @@
+06/30/1996
+
+Some systems that use apollo and banyan save a file called token.on for apollo which is used by automenu to show which network is loaded. Banyan.on indicates that banyan is loaded.
+
+If you can't login (getting already logged in message), one of those files probably still exist, if you previously logged out improperly. You should delete these files and you should then be able to logon again. 
