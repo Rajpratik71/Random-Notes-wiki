@@ -1,3 +1,3 @@
-Refreshes Name within WINS
+Nbtstat -RR
 
 Applies to: Windows XP/2003 
