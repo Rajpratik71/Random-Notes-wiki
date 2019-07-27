@@ -1,0 +1,23 @@
+Your program might require to disable Ctrl-Alt-Del key sequence, for example if you don't want your program to be unloaded from memory (it's up to you to decide if your users will love you for that): and it is possible by using the SystemParametersInfo API function. This function is used by Control Panel to customize the Windows environment like setting keyboard-, display-, sound setting parameters and others. Its syntax is as follows: 
+
+ BOOL SystemParametersInfo(
+	UINT uiAction,  // system parameter to query or set
+	UINT uiParam,   // depends on action to be taken
+	PVOID pvParam,  // depends on action to be taken
+	UINT fWinIni    // user profile update flag
+ );
+
+The meaning of each parameter is described in Win32 Developer's Reference (kbase.hlp). Now, to do what we want, we must call this function like in the following procedure: 
+
+ <p>procedure DisableCtrlAltDel;<br>
+ var<br>
+   i : integer;<br>
+ begin<br>
+   i := 0;<br>
+   {Disable Ctrl-Alt-Del}<br>
+   SystemParametersInfo( SPI_SCREENSAVERRUNNING, 1, @i, 0);<br>
+ end.<br></p>
+
+Don't forget to place WinProcs unit in "uses" clause of your unit. Remark: To disable the Alt-Tab sequence, you must use the first parameter SPI_SETFASTTASKSWITCH and others are the same as above. 
+
+This only works on Windows 9x
