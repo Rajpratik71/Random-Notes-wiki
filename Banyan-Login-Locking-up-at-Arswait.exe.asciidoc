@@ -1,0 +1,8 @@
+06/30/1996
+
+Problem: Banyan Login Locking up at Arswait.exe
+
+Solution: Check the Transceiver statement in Protocol.ini. Make sure it is correct. It will Either be external or onboard. External if you are using a MAU. 
+
+Example:
+Transceiver=onboard
