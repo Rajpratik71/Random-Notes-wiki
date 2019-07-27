@@ -1,0 +1,67 @@
+ uses
+ Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Menus;
+ 
+ var
+ Form1: TForm1;
+ hTaskBarWindow : Hwnd;
+ 
+ implementation
+ 
+ {$R *.DFM}
+ 
+ procedure TForm1.FormCreate(Sender: TObject);
+ var
+ x,y: Integer;
+ hApplic: HWND;
+ begin
+ x:=Screen.Width; y:=Screen.Height; ComboBox1.Text := IntToStr(x) + 'x' +IntToStr(y); end;
+
+ function NewRes(XRes,YRes:DWord):integer;
+ var
+  DevMode:TDeviceMode;
+ begin
+  EnumDisplaySettings(nil, 0, DevMode);
+  DevMode.dmFields:=DM_PELSWIDTH or DM_PELSHEIGHT;
+  DevMode.dmPelsWidth:=XRes;
+  DevMode.dmPelsHeight:=YRes;
+  Result:=ChangeDisplaySettings(DevMode, 0);
+ end;
+ 
+ function SetScreenResolution(Width, Height: integer): Longint;
+ var
+  DeviceMode: TDeviceMode;
+ begin
+  with DeviceMode do begin
+  dmSize := SizeOf(TDeviceMode);
+  dmPelsWidth := Width;
+  dmPelsHeight := Height;
+  dmFields := DM_PELSWIDTH or DM_PELSHEIGHT;
+  end;
+  Result := ChangeDisplaySettings(DeviceMode, CDS_UPDATEREGISTRY);
+ end;
+
+procedure TForm1.ComboBox1Change(Sender: TObject);
+var
+ OldWidth, OldHeight: integer;
+ x,y: Integer;
+ 
+ begin
+  OldWidth := GetSystemMetrics(SM_CXSCREEN);
+  OldHeight := GetSystemMetrics(SM_CYSCREEN);
+  x:=Screen.Width;
+  y:=Screen.Height;
+  case ComboBox1.ItemIndex of
+   0: SetScreenResolution(640, 480);
+   1: SetScreenResolution(800, 600);
+   2: SetScreenResolution(1024, 768);
+   3: SetScreenResolution(1152, 864);
+   4: SetScreenResolution(1280, 1024);
+  end;
+end;
+
+//The following items should be contained in ComboBox1.Items
+640x480
+800x600
+1024x768
+1152x864
+1280x1024
