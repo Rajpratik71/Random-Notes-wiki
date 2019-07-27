@@ -1,0 +1,7 @@
+06/30/1996
+
+Problem: Beyond mail throwing GPF in module s3????.
+
+Reason: The Dell S3 video driver is conflicting with Beyond mail.
+
+Solution: Update Driver.
