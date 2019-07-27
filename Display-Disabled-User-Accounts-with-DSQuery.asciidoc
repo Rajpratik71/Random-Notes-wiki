@@ -1,0 +1,1 @@
+ dsquery user <domainroot> -disabled -limit 0
