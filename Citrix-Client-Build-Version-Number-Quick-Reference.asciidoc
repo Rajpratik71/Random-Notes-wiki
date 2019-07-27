@@ -1,0 +1,105 @@
+[http://support.citrix.com/article/ctx112613]
+
+Build Number
+ Version Number
+ Release Date
+ 
+1050
+ 6.30
+ September, 2002
+ 
+1051
+ 6.31
+ October, 2002
+ 
+17534
+ 7.00
+ June, 2003
+ 
+20497
+ 7.01
+ June, 2003
+ 
+22650
+ 7.10
+ November, 2003
+ 
+24737
+ 8.00
+ April, 2004
+ 
+29670
+ 8.10
+ October, 2004
+ 
+32649
+ 9.00
+ April, 2005
+ 
+36280
+ 9.10
+ October, 2005
+ 
+39151
+ 9.15
+ December, 2005
+ 
+44376
+ 9.20
+ May, 2006
+ 
+50211
+ 9.23
+ November, 2006
+ 
+52110
+ 10.00
+ March, 2007
+ 
+55836
+ 10.10
+ June, 2007
+ 
+58643
+ 10.15
+ November, 2007
+ 
+02650
+ 10.20
+ March, 2008
+ 
+5357
+ 11.00
+ September, 2008
+ 
+19460
+ 11.1
+ February, 2009
+ 
+5357
+ 11.0.150
+ November, 2009
+ 
+31560
+ 11.2
+ September, 2009
+ 
+6410
+ 12.0
+ March, 2010
+ 
+6
+ 12.0.3
+ August, 2010
+ 
+30
+ 12.1
+ November, 2010
+ 
+6685
+ 3.0 (aka - 13.0)
+ August, 2011
+ 
+89
+ 3.1 (aka - 13.1)
+ December, 2011
