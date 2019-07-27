@@ -1,0 +1,36 @@
+The following command will convert from Windows 2012 Server Core to Server with a GUI mode using Windows Update:
+
+ Install-WindowsFeature Server-Gui-Mgmt-Infa,Server-Gui-Shell -Restart
+
+When Windows 2012 server was installed in Server Core mode and if Windows Update is not available, the Install-WindowsFeature cmdlet will not work on its own because the GUI image will not exist on the hard drive. The image path will need to be specified first. 
+
+Step 1: 
+
+ Get-WindowsImage -ImagePath <path to install.wim>
+
+Example: 
+
+ PS C:\>  Get-WindowsImage -ImagePath D:\Sources\install.wim
+ 
+ Index       : 1
+ Name        : Windows Server 2012 SERVERSTANDARDCORE
+ Description : Windows Server 2012 SERVERSTANDARDCORE
+ Size        : 7,195,580,708 bytes
+ 
+ Index       : 2
+ Name        : Windows Server 2012 SERVERSTANDARD
+ Description : Windows Server 2012 SERVERSTANDARD
+ Size        : 11,999,848,937 bytes
+ 
+ Index       : 3
+ Name        : Windows Server 2012 SERVERDATACENTERCORE
+ Description : Windows Server 2012 SERVERDATACENTERCORE
+ Size        : 7,176,243,455 bytes
+ 
+ Index       : 4
+ Name        : Windows Server 2012 SERVERDATACENTER
+ Description : Windows Server 2012 SERVERDATACENTER
+ Size        : 11,995,224,677 bytes
+
+Make note if the index number and run the following command (with appropriate index#) to install the GUI feature:
+ Step 2: Install-Windows Feature Server-Gui-Mgmt-Infra,Server-Gui-Shell -Restart -Source wim:d:\sources\install.wim:<index#>
