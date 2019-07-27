@@ -1,0 +1,14 @@
+This will set a timebomb to close the program on activation after the year 2000.
+
+ procedure TForm1.FormActivate(Sender: TObject);
+ var
+  TodaysDate, BombDate : TDate;
+ begin
+  BombDate := StrToDate('1/1/2000');
+  TodaysDate := (Date);
+  if TodaysDate >= BombDate then
+  begin
+    ShowMessage('" error %s');
+    Close();
+  end;
+ end;
