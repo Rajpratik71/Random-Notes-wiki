@@ -1,0 +1,3 @@
+The University of North Carolina has finally found a network server that, although missing for four years, hasn't missed a packet in all that time.
+
+Try as they might, university administrators couldn't find the server. Working with Novell, IT workers tracked it down by meticulously following cable until they literally ran into a wall. The server had been mistakenly sealed behind drywall by maintenance workers. 
