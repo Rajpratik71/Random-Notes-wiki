@@ -1,0 +1,22 @@
+ procedure TForm1.FormCreate(Sender: TObject);
+ begin
+  DC := CreateDC(Pchar('DISPLAY'),,,nil);
+ end;
+ 
+ procedure TForm1.Timer1Timer(Sender: TObject);
+ var
+  P : TPoint;
+  Col : TColor;
+ begin
+  Timer1.Enabled := False;
+  GetCursorPos(P); // Where the mouse is currently.
+  
+Get the Pixel Color using the Device Context we created earlier
+ 
+ Col := GetPixel(DC,P.X,P.Y);
+ if (Col = CLR_INVALID) then
+ Label1.caption := 'In trouble!'
+ else
+ Label1.Caption := 'RGB: ' + IntToHex(GetRValue(Col),2) + ' ' + IntToHex(GetGValue(Col),2) + ' ' + IntToHex(GetBValue(Col),2);
+ Timer1.Enabled := True;
+ end; 
