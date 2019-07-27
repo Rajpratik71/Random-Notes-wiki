@@ -1,0 +1,4 @@
+Cisco has a great chapter available on Banyan VINES Internetworking. You can view it here:[http://docwiki.cisco.com/wiki/Banyan_VINES http://docwiki.cisco.com/wiki/Banyan_VINES].
+
+You can also view the PDF directly from here: [http://www.cisco.com/en/US/docs/internetworking/technology/handbook/VINES.pdf http://www.cisco.com/en/US/docs/internetworking/technology/handbook/VINES.pdf]
+
