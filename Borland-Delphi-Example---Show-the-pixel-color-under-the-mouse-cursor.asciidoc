@@ -10,9 +10,7 @@
  begin
   Timer1.Enabled := False;
   GetCursorPos(P); // Where the mouse is currently.
-  
-Get the Pixel Color using the Device Context we created earlier
- 
+ # Get the Pixel Color using the Device Context we created earlier
  Col := GetPixel(DC,P.X,P.Y);
  if (Col = CLR_INVALID) then
  Label1.caption := 'In trouble!'
