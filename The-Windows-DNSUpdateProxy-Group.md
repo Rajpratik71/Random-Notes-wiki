@@ -1,0 +1,1 @@
+The Active Directory **DNSUpdateProxy** Group should contain all of your authorized DHCP servers to allow for Dynamic Updates by multiple DHCP servers. 
