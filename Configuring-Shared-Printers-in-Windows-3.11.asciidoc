@@ -1,0 +1,7 @@
+Go to Print Manager
+
+Go to Options + Printer Setup
+
+Install Necessary Printer Drivers
+
+Connect to the desired print share in the browser and click OK. 
