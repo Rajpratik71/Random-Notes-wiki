@@ -1,5 +1,4 @@
 == CONFIG.SYS ==
-<pre>
 BUFFERS=20,0
 FILES=80
 FCBS=4,0
@@ -7,10 +6,8 @@ DEVICE=C:\DOS\PROTMAN.DOS /I:a:\
 DEVICE=C:\DOS\ELNK3.DOS
 DEVICE=C:\DOS\setver.exe
 SHELL=C:\DOS\CoMMAND.COM a:\ /p /e:1024
-</pre>
 
 == AUTOEXEC.BAT ==
-<pre>
 @ECHO OFF
 PROMPT $p$g
 PATH=C:\DOS
@@ -20,10 +17,8 @@ C:\DOS\redir4
 C:\DOS\netbind
 C:\DOS\arswait
 Z:login
-</pre>
 
 == PROTOCOL.INI ==
-<pre>
 [PROTOCOL MANAGER]
   DRIVERNAME = PROTMAN$
 [VINES_XIF]
@@ -36,4 +31,3 @@ Z:login
   DRIVERNAME=PKTDRV$
   BINDINGS=MS$ELNK3
   INTVEC=0x7C
-</pre>
