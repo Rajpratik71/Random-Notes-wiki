@@ -1,20 +1,20 @@
-!**************************************
-! Name: Copy form at runtime
-! Description:This code demonstrates how to make a copy of a form at runtime. This can be useful when making a web browser and wanting a new url popping up in a new window.
-! By: Ivan Z
-!
-!
-! Inputs:None
-!
-! Returns:A new window
-!
-!Assumes:You need to have a Form1 (TForm1) and a Button (TButton)
-!
-!Side Effects:None
-!This code is copyrighted and has limited warranties. Please see http://www.Planet-Source-Code.com/xq/ASP/txtCodeId.583/lngWId.7/qx/vb/scripts/ShowCode.htm for details.
-!**************************************
-    
-//Put this as your application 
+ !**************************************
+ ! Name: Copy form at runtime
+ ! Description:This code demonstrates how to make a copy of a form at runtime. This can be useful when making a web  browser and wanting a new url popping up in a new window.
+ ! By: Ivan Z
+ !
+ !
+ ! Inputs:None
+ !
+ ! Returns:A new window
+ !
+ !Assumes:You need to have a Form1 (TForm1) and a Button (TButton)
+ !
+ !Side Effects:None
+ !This code is copyrighted and has limited warranties. Please see http://www.Planet-Source-Code.com/xq/ASP/txtCodeId.583/lngWId.7/qx/vb/scripts/ShowCode.htm for details.
+ !**************************************
+     
+ //Put this as your application 
  procedure TForm1.Button1Click(Sender: TObject);
  var
    objNewForm : TForm1;
