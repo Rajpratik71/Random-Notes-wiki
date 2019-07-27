@@ -1,0 +1,22 @@
+GPT (GUID Partition Table) disks are not supported with the VMWare Converter, so you should always check and make sure that there are no GPT disks present before you convert a physical server. 
+
+To check for GPT disks, run the following commands:
+
+ c:\>'''diskpart'''
+ 
+ Microsoft DiskPart version 5.2.3790.3959
+ Copyright (C) 1999-2001 Microsoft Corporation.
+ On computer: Server01
+ 
+ DISKPART> '''list disk'''
+  
+  Disk ###  Status      Size     Free     Dyn  Gpt
+  --------  ----------  -------  -------  ---  ---
+  Disk 0    Online        20 GB      0 B        '''*'''
+  Disk 1    Online       300 GB      0 B
+ 
+ DISKPART>
+
+Note: If you receive the error; "The disk management services could not complete the operation.," the Virtual Disk Service is probably disabled. Set the service to start manually and try again. 
+
+Applies to: Microsoft Windows 2003+
