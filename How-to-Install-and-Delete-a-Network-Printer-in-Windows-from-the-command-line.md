@@ -18,3 +18,5 @@ Example:
 <pre>
 RUNDLL32 PRINTUI.DLL,PrintUIEntry /in /c\\PS01 /n\\PS01\HR-LJ
 </pre>
+
+Applies to Windows XP/2003
