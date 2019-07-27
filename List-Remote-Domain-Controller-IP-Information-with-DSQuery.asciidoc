@@ -1,0 +1,1 @@
+ for /f %i in (‘dsquery server -domain %userdnsdomain% -o rdn’) do psexec \\%i ipconfig /all
