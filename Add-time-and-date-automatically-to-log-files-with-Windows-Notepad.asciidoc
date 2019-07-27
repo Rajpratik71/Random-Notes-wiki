@@ -1,0 +1,5 @@
+1. Create a blank text file with .LOG as the first line of the file, followed by a carriage return, and then save and close the file.<br>
+2. Double-click the file to open it and notice that Notepad appends the current date and time to the end of the file and places the cursor on the line after.<br>
+3. Type your notes and then save and close the file. <br>
+<br>
+Each time you open the file, Notepad repeats the process, appending the time and date to the end of the file and placing the cursor below it.
