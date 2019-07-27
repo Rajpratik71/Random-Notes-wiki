@@ -1,4 +1,5 @@
- Sample DLL Code:
+Sample DLL Code:
+
   library MyDLL;
   uses
    ShareMem, SysUtils, Classes, Windows; 
@@ -18,7 +19,7 @@
  begin
  end.
  
- Sample Application Code:
+Sample Application Code:
  
  unit Main;
  interface
