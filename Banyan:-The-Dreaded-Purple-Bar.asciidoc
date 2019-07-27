@@ -1,0 +1,5 @@
+Before the days of the Windows BSOD (Blue Screen of Death), Banyan VINES users may remember the same feeling of frustration from the dreaded purple bar. I wanted to share what it looked like so I reconfigured an old Banyan bootdisk to replicate the error.
+
+The boot disk was setup for a 3com Etherlink II network card, so I had to download the NDIS driver for my Intel e100b NIC. I just copied the .DOS driver onto the floppy, changed the CONFIG.SYS to reflect the new .DOS driver and modified the PROTOCOL.INI with "DRIVERNAME = E100B$". The drivers need to successfully bind to the card before we can attempt to connect at all. So, once that was done I booted off of the floppy and was able to get the notorious purple "File Volume "VINES files" is not available" error. 
+
+This error occurs because the Banyan client cannot find a VINES server on the network to login. You would often get this error when the network cable was unplugged. Normally the client finds a server and maps the Z: drive to a file share containing important "VINES files", including login.exe. Since no servers are available on my network, we get this error.
