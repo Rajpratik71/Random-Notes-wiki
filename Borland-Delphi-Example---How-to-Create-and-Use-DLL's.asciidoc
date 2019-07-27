@@ -1,63 +1,62 @@
-<pre>
-Sample DLL Code:
-
-library MyDLL;
-
-uses<br>
-  ShareMem, SysUtils, Classes, Windows; <br>
-  // You will need to use "ShareMem" in the uses clause of both the DLL and Application<br>
-
-{$R *.res}
-
-function GetCurrentComputerName : String;<br>
-var<br>
-  NameBuf: array[0..80] of Char;<br>
-  SizeBuf: LongWord;<br>
-begin<br>
-  SizeBuf := Sizeof(NameBuf);<br>
-  GetComputerName(NameBuf, SizeBuf);<br>
-  result := NameBuf;<br>
-end;<br>
-
-exports<br>
-  GetCurrentComputerName;<br>
-
-begin<br>
-end.<br>
-
-//---------------------------------------------------------------------<br>
-Sample Application Code:<br>
-
-unit Main;<br>
-
-interface<br>
-
-uses<br>
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,Dialogs, StdCtrls;
-
-type<br>
-  TForm1 = class(TForm)<br>
-    Edit1: TEdit;<br>
-    Button1: TButton;<br>
-    procedure Button1Click(Sender: TObject);<br>
-  private<br>
-    { Private declarations }<br>
-  public<br>
-    { Public declarations }<br>
-  end;
-
-var<br>
-  Form1: TForm1;<br>
-
-implementation
-
-{$R *.dfm}
-
-function GetCurrentComputerName: String; external '.\MyDll.dll';
-
-procedure TForm1.Button1Click(Sender: TObject);<br>
-begin<br>
-  Edit1.Text := GetCurrentComputerName;<br>
-end;<br>
-
-end.</pre>
+ Sample DLL Code:
+ 
+ library MyDLL;
+ 
+ uses<br>
+   ShareMem, SysUtils, Classes, Windows; <br>
+   // You will need to use "ShareMem" in the uses clause of both the DLL and Application<br>
+ 
+ {$R *.res}
+ 
+ function GetCurrentComputerName : String;<br>
+ var<br>
+   NameBuf: array[0..80] of Char;<br>
+   SizeBuf: LongWord;<br>
+ begin<br>
+   SizeBuf := Sizeof(NameBuf);<br>
+   GetComputerName(NameBuf, SizeBuf);<br>
+   result := NameBuf;<br>
+ end;<br>
+ 
+ exports<br>
+   GetCurrentComputerName;<br>
+ 
+ begin<br>
+ end.<br>
+ 
+ //---------------------------------------------------------------------<br>
+ Sample Application Code:<br>
+ 
+ unit Main;<br>
+ 
+ interface<br>
+ 
+ uses<br>
+   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,Dialogs, StdCtrls;
+ 
+ type<br>
+   TForm1 = class(TForm)<br>
+     Edit1: TEdit;<br>
+     Button1: TButton;<br>
+     procedure Button1Click(Sender: TObject);<br>
+   private<br>
+     { Private declarations }<br>
+   public<br>
+     { Public declarations }<br>
+   end;
+ 
+ var<br>
+   Form1: TForm1;<br>
+ 
+ implementation
+ 
+ {$R *.dfm}
+ 
+ function GetCurrentComputerName: String; external '.\MyDll.dll';
+ 
+ procedure TForm1.Button1Click(Sender: TObject);<br>
+ begin<br>
+   Edit1.Text := GetCurrentComputerName;<br>
+ end;<br>
+ 
+ end.
