@@ -1,0 +1,5 @@
+Getting SSL error 61 with Citrix XenApp 11 with Mozilla Firefox 3.0.11 on Ubunto 8.04 Linux
+
+The certificate is missing in the linux Ica Client.
+
+Solution: cp /usr/share/ca-certificates/mozilla/* to /home/<username>/ICAClient/keystore/cacerts/" 
