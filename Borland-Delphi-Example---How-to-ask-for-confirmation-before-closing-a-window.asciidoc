@@ -1,0 +1,6 @@
+ procedure TForm1.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+ begin
+ if MessageDlg('Are you sure?', mtConfirmation, mbYesNoCancel, 0) = mryes
+ then CanClose := true
+ else CanClose := false;
+ end;
