@@ -10,11 +10,9 @@ Download DNSLint from http://support.microsoft.com/?kbid=321045 http://support.m
 ## Functions
 Verify Domain Name System (DNS) records with the following.
 <pre>
- dnslint /d: This diagnoses potential causes of "lame delegation" and other </pre>
+ dnslint /d: This diagnoses potential causes of "lame delegation" and other 
 related DNS problems.
-<pre>
- dnslint /ql: This verifies a user-defined set of DNS records on multiple DNS </pre>
+ dnslint /ql: This verifies a user-defined set of DNS records on multiple DNS
 servers.
-<pre>
  dnslint /ad: This verifies DNS records specifically used for Active Directory replication.
 </pre>
