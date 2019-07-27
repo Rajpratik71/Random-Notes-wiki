@@ -1,0 +1,1 @@
+Note: GPO settings are refreshed every 90 minutes, by default, with a 30 minute random offset that minimizes the load on the network by staggering the refresh times for individual servers and workstations.
