@@ -1,6 +1,7 @@
 | System | Username/Password |
 |-----|-----|
 | APC Smart-UPS (Schneider Electric) | apc/apc |
+| BMC Remedy Admin Account | Demo/<blank> |
 | Common | Guest/Guest |
 | DEC VAX/VMS | FIELD/SERVICE |
 | DEC VAX/VMS | SYSTEM/MANAGER |
